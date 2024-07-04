@@ -20,3 +20,9 @@ class Solution:
           print("Scaled Mean = ", Scaled_Mean.mean(axis = 0))
           print("Scaled STD = ", Scaled_Mean.std(axis = 0))
           
+     def Min_Max_Scalar(self):
+          from sklearn import preprocessing
+          Input_Array = self.df[['Home', 'Offers']].values
+          data_scalar_minmax = preprocessing.MinMaxScaler(feature_range=(0,1))
+          data_scaled_minmax = data_scalar_minmax.fit_transform(Input_Array)
+          return f"MinMax Scalar is: {data_scaled_minmax}"

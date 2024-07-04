@@ -1,4 +1,4 @@
-from Binarization.app import Solution
+from app import Solution
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
@@ -7,3 +7,4 @@ ans = Solution(df)
 print("After Doing Binarization :")
 print(ans.Binarization())
 print(ans.Mean_Removal())
+print(ans.Min_Max_Scalar())
